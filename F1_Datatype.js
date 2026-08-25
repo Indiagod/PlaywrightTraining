@@ -121,3 +121,95 @@ console.log(typeof stdNAme);//object //Interview ques
 let clgName = null;
 console.log(clgName); //null
 console.log(typeof clgName);//object //Interview ques
+
+
+console.log("===============symbol=======");
+/*
+It is used to create unique keys in JS object
+NA for automation
+
+Object ways
+===============
+1. Object Literal
+2. Using class
+3. Using constructor funcation
+4. Using prototypes
+*/
+console.log("-------Object Literal--------");
+
+
+
+
+let user = {}
+console.log(user); //{}
+console.log(typeof user); //object
+
+//Array
+let userId = [10,20,30];
+console.log(userId);  //[10,20,30]
+console.log(typeof userId); // object
+
+let person = {
+  id: 101,
+  name: 'Sarang'
+}
+console.log(person);// {id: 101, name: 'Sarang'}
+
+/*
+Access property from object
+
+1. Dot Notation
+ObjectName.Key
+
+2. Bracket Notation
+ObjectName["Key"]
+*/
+
+console.log(person.id);
+console.log(person["name"]);
+
+//Add new property
+person.address = "Pune";
+console.log(person);
+
+//Modify a property
+person.id = 200;
+console.log(person);
+
+//delete a property
+delete person.address;
+console.log(person);
+
+//symbol type data
+let profile1 = Symbol("QA");
+console.log(profile1); // Symbol(QA)
+console.log(typeof profile1); //symbol
+
+let product = {
+  name : "Macbook Pro",
+  price : 877773
+}
+console.log(product);
+
+//To add unique property to an object we use symbol type
+let pid = Symbol("id");
+
+//add symbol property to object
+product[pid]= 8888;
+
+console.log(product); //{ name: 'Macbook Pro', price: 877773, Symbol(id): 8888 }
+
+product.pid = 1010;
+console.log(product); //{ name: 'Macbook Pro', price: 877773, pid: 1010, Symbol(id): 8888 }
+
+//product pid got override
+product.pid = 2020;
+console.log(product); //{ name: 'Macbook Pro', price: 877773, pid: 2020, Symbol(id): 8888 }
+
+delete product.pid;
+console.log(product); //{ name: 'Macbook Pro', price: 877773, Symbol(id): 8888 }
+
+//to modify symbol type data
+product[pid] = 9999;
+console.log(product); //{ name: 'Macbook Pro', price: 877773, Symbol(id): 9999 }
+
