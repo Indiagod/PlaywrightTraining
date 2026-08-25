@@ -194,7 +194,7 @@ console.log(product);
 //To add unique property to an object we use symbol type
 let pid = Symbol("id");
 
-//add symbol property to object
+//add symbol property to object  Syntax: objectName[symbol type variable]
 product[pid]= 8888;
 
 console.log(product); //{ name: 'Macbook Pro', price: 877773, Symbol(id): 8888 }
@@ -212,4 +212,6 @@ console.log(product); //{ name: 'Macbook Pro', price: 877773, Symbol(id): 8888 }
 //to modify symbol type data
 product[pid] = 9999;
 console.log(product); //{ name: 'Macbook Pro', price: 877773, Symbol(id): 9999 }
+
+
 
