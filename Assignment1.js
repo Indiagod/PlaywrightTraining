@@ -354,9 +354,10 @@ var x10 = 20; //SyntaxError: Identifier 'x10' has already been declared
 console.log(x10);//10
 */
 
-/*Question 10 */
+/*Question 10 
 const x7 = 10;
 {
 var x7 = 20;  //SyntaxError: Identifier 'x7' has already been declared
 }
 console.log(x7);
+*/
